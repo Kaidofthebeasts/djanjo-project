@@ -1,0 +1,226 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="{{img.16.image.url}}" />
+    <link rel="stylesheet" href="{%static 'style.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Z-Cakes</title>
+  </head>
+  <body>
+    {% include "header.html" %}
+    <section id="home" style="background-image: url({{ Title.0.image.image.url }});">
+      <div class="container col-xxl-8 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6 pt-5 py-5"></div>
+          <div class="col-lg-6 pt-5">
+            <h1 class="display-5 fw-bold lh-1 mb-3 pt-5">
+              {{ Title.0.name }}
+            </h1>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button
+                type="button"
+                class="btn btn-dark border border-light text-light btn-lg px-4 me-md-2"
+              >
+                SHOP
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="container col-xxl-8 px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="{{img.3.image.url}}"
+              class="d-block mx-lg-auto img-fluid intro-pic rounded-circle"
+              alt="A cake photo"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6 text-center">
+            <h2 class="display-5 fw-bold font text-body-emphasis lh-1 mb-3">
+              {{ Title.1.name }}
+            </h2>
+            <p class="lead">
+              {{ Title.1.description}}
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <a href="{% url 'order' %}">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg px-4 me-md-2 how-to text-center"
+                  style="border-radius: 500px"
+                >
+                  HOW TO ORDER
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Holiday-Collection mb-5 container-fluid mt-5">
+      <div class="col-lg-6 text-center px-5 text-center">
+        <h2 class="display-5 fw-bold text-body-emphasis font lh-1 mb-3 pt-5">
+          {{ Title.2.name }}
+        </h2>
+        <p class="lead text-light">
+          {{ Title.2.description }}
+        </p>
+      </div>
+      <div class="container my-3">
+        <div class="row">
+          {% for c in cake %} 
+          <div
+            class="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center text-light"
+          >
+            <img src="{{c.image.image.url}}" alt="cake photo" class="img-fluid" />
+            <p class="lead cake-name">{{c.name}} <br />{{c.price}} birr</p>
+          </div>
+          {% endfor %}
+          
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <a href="#">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 me-md-2 how-to text-center mb-5"
+              style="border-radius: 500px"
+            >
+              ORDER HERE
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="container col-xxl-8 px-4">
+        <div class="row flex-lg-row align-items-center g-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="{{Title.3.image.image.url}}  "
+              class="d-block mx-lg-auto img-fluid intro-pic rounded-circle"
+              alt="chef with a cake"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6 text-center">
+            <h2 class="display-5 fw-bold text-body-emphasis font lh-1 mb-3">
+              {{Title.3.name}}
+            </h2>
+            <p class="lead">
+              {{Title.3.description}}
+            </p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <a href="{% url 'about' %}">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg px-4 me-md-2 how-to text-center"
+                  style="border-radius: 500px"
+                >
+                  OUR STORY
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="delicious py-5 container-fluid mt-5 text-center">
+      <h2 class="font display-4 mx-5 pt-5" style="font-style: italic">
+        {{Title.4.name}}
+      </h2>
+      <div class="row">
+        {% for p in pack %} 
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <img
+            src="{{p.image.image.url}}"
+            alt="cake photo"
+            class="img-fluid delicious-pics"
+          />
+          <p class="lead font">
+            {{p.name}}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </p>
+          
+        </div>
+        {% endfor %}
+      
+      </div>
+    </section>
+
+    <section class="card-info container mt-5">
+      <div class="row justify-content-center">
+        {% for a in about %} 
+        <div
+          class="card col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xxl-12 mb-5"
+          style="width: 18rem"
+        >
+          <img
+            src="{{a.image.image.url}}"
+            class="card-img-top rounded-circle"
+            alt="cake photo"
+            height="300"
+            width="100"
+          />
+          <div class="card-body text-center">
+            <p class="card-text font">{{a.name }}</p>
+            <p class="card-text font">
+              {{a.description}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {%include "footer.html"%}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/429ea13c56.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

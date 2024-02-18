@@ -1,0 +1,70 @@
+#home {
+  background-image: url(img/cake-0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.font {
+  font-family: "Lancelot", serif;
+}
+
+h1 {
+  margin-top: 190px;
+  margin-left: 50px;
+  margin-right: 0;
+  font-family: "Lancelot", serif;
+  color: #f55;
+}
+
+.btn {
+  margin-left: 50px;
+  background: #f55;
+  font-family: "Lancelot", serif;
+  border-color: white;
+}
+.btn:hover {
+  margin-left: 50px;
+  background: black;
+  font-family: "Lancelot", serif;
+  border-color: white;
+}
+
+.img-fluid {
+  height: 400px;
+}
+
+.intro-pic {
+  margin-top: 20%;
+}
+
+.Holiday-Collection {
+  background-color: #a93a45d2;
+}
+
+.cake-name {
+  font-family: "Lancelot", serif;
+  font-size: 30px;
+}
+
+.delicious {
+  background-color: rgba(255, 228, 196, 0.532);
+}
+
+.delicious-pics {
+  margin-bottom: 5%;
+  height: 200px;
+  width: 400px;
+}
+
+.card {
+  background-color: rgba(128, 128, 128, 0.119);
+  margin: 0 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.footer-home {
+  font-size: 20px;
+}

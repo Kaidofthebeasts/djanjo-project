@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(222, 224, 224);
+  font-family: "Lancelot", serif;
+}
+
+.cakes-pics {
+  background-color: rgba(255, 228, 196, 0.532);
+}
+
+.pic-cake {
+  height: 300px;
+}

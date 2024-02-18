@@ -1,0 +1,14 @@
+body {
+  font-family: "Lancelot", serif;
+}
+
+.contact-body {
+  background-color: bisque;
+}
+.img-fluid {
+  height: 600px;
+}
+
+.form-div-cont {
+  background-color: rgba(255, 85, 125, 0.694);
+}

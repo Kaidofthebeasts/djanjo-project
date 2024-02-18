@@ -1,0 +1,106 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="{{img.16.image.url}}" />
+    <link rel="stylesheet" href="{%static 'contact.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Z-Cakes</title>
+  </head>
+  <body>
+    {% include "header.html" %}
+    <section class="contact py-3 m-5">
+      <div class="container col-xxl-8 px-4 mt-5">
+        <h1 class="border-bottom border-2">Contact US</h1>
+        <div
+          class="row flex-lg-row align-items-center g-5 mt-5 justify-content-center"
+        >
+          <div class="col-10 col-sm-8 col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1005.0867481754376!2d38.715265554356534!3d9.01957848686474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1701346311042!5m2!1sen!2set"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="ratio ratio-4x3"
+            ></iframe>
+          </div>
+          <div class="col-lg-6 text-center contact-body py-5">
+            <h2 class="display-5 fw-bold font text-body-emphasis lh-1 mb-3">
+              Come see our cakes!
+            </h2>
+            <p class="lead">Our Bakery</p>
+            <p class="lead">
+              You can find us happily baking from our premises at Kolfe Keraniyo
+              08/09, Addis Abeba.
+            </p>
+            <p class="lead">Addis Abeba,Ethiopia</p>
+            <p class="lead">
+              You can see and purchase some of our gorgeous Express cakes whole
+              or by the slice at Kolfe Keraniyo 08/09, Addis Abeba.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form-cont">
+      <div
+        class="container mx-auto form-div-cont py-5 mb-5 border border-3 border-dark"
+      >
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="John Doe"
+          />
+
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Example textarea</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            style="resize: none; height: 150px"
+          ></textarea>
+        </div>
+      </div>
+    </section>
+    {%include "footer.html"%}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

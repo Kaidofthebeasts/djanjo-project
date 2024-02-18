@@ -1,0 +1,25 @@
+body {
+  font-family: "Lancelot", serif;
+}
+
+.img-fluid {
+  height: 600px;
+}
+
+.how-to-intro,
+.how-to-body {
+  background-color: rgba(222, 224, 224, 0.489);
+}
+
+.how-to-custom {
+  background-image: url(https://media.post.rvohealth.io/wp-content/uploads/2021/11/baking-soda-and-brush-732x549-thumbnail-732x549.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.footer-home {
+  background-color: rgb(222, 224, 224);
+}
